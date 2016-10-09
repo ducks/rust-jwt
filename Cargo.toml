@@ -4,5 +4,8 @@ version = "0.1.0"
 authors = ["Jake Goldsborough <rjgoldsborough@gmail.com>"]
 
 [dependencies]
-openssl = "0.7.14"
 rustc-serialize = "0.3"
+
+[dependencies.openssl]
+version = "0.8.3"
+features = ["hmac"]

@@ -128,7 +128,7 @@ fn sign(header: String, payload: String, secret: String, alg: &Alg) -> Vec<u8> {
     }
   };
 
-  sig
+  sig.ok().unwrap()
 }
 
 pub fn decode(token: String, secret: String, alg: &Alg) -> Result<(Header, Payload), Error> {
